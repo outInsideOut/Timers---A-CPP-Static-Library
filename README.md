@@ -18,13 +18,13 @@ The Timers Library includes two usable classes: ***QuickTimer*** and ***LabeledT
 1. Download the package and take note of it's location
 2. open the visual studio app you wish to use this library with
 3. right-click on the top level of solution explorer -> add -> existing project -> the Timers project you downloaded
-		1. The Timers project should now be in your solution explorer
+(The Timers project should now be in your solution explorer)
 4. right-click on the references tab for your project in VS solution explorer
-		1. Tick the box next to the "Timers" to include a reference to the library
+		-> Tick the box next to the "Timers" to include a reference to the library
 5. right-click on your project in the solution explorer tab -> properties
-		1. on the left hand side click on c/c++ -> general
-		2. on the drop down menu for "Additional Include Directories" select "edit"
-		3. click the new folder button and then the "..." button to browse for the "Timers" project you downloaded
+		a. on the left hand side click on c/c++ -> general
+		b. on the drop down menu for "Additional Include Directories" select "edit"
+		c. click the new folder button and then the "..." button to browse for the "Timers" project you downloaded
 6. In the code file you wish to use this library within, type ##include "Timers.h"#
 
 The library should now be included within your VS C++ project, allowing you to initialise and use objects of the QuickTimer and LabeledTImer classes.
