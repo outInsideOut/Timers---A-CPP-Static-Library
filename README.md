@@ -36,7 +36,7 @@ The library should now be included within your VS C++ project, allowing you to i
 #### example 1)
 *this example uses an object pointer to construct and destruct the abstract QuickTimer object. This will print the duration in microseconds(us), of the "code to be timed"*
 
-	Quicktimer# qT = new QuickTimer();
+	Quicktimer* qT = new QuickTimer();
 
 	// code to be timed...
 	//...
@@ -58,7 +58,7 @@ The library should now be included within your VS C++ project, allowing you to i
 #### example 3)
 *this example uses an object pointer to construct and destruct the abstract LabeledTimer object. This will print the duration in microseconds(us), of the "code to be timed", , with the label *a* *
 
-	LabeledTimer# lT = new LabeledTimer('a');
+	LabeledTimer* lT = new LabeledTimer('a');
 
 	// code to be timed...
 	//...
@@ -114,7 +114,7 @@ The timer is started when the object is initialised. Upon destruction of the tim
 #### example 1)
 *this example uses an object pointer to construct and destruct the abstract QuickTimer object. This will print the duration in microseconds(us), of the "code to be timed"*
 
-	Quicktimer# qT = new QuickTimer();
+	Quicktimer* qT = new QuickTimer();
 
 	// code to be timed...
 	//...
@@ -149,7 +149,7 @@ The timer is started when the object is initialised. Upon destruction of the tim
 #### example 1)
 *this example uses an object pointer to construct and destruct the abstract LabeledTimer object. This will print the duration in microseconds(us), of the "code to be timed", , with the label *a* *
 
-	LabeledTimer# lT = new LabeledTimer('a');
+	LabeledTimer* lT = new LabeledTimer('a');
 
 	// code to be timed...
 	//...
