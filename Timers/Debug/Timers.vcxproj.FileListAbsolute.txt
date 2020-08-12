@@ -1,3 +1,5 @@
 C:\Users\finre\dev\CPP\Timers\Debug\Timers.pdb
 C:\Users\finre\dev\CPP\Timers\Timers\Debug\Timers.pdb
 C:\Users\finre\dev\CPP\TestyTimers\Debug\Timers.pdb
+C:\Users\finre\Desktop\Project1\Debug\Timers.pdb
+D:\Dev\GitHub\Timers---A-CPP-Static-Library\Timers\Debug\Timers.pdb
