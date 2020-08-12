@@ -25,7 +25,7 @@ The Timers Library includes two usable classes: ***QuickTimer*** and ***LabeledT
 	- on the left hand side click on c/c++ -> general
 	- on the drop down menu for "Additional Include Directories" select "edit"
 	- click the new folder button and then the "..." button to browse for the "Timers" project you downloaded
-6. In the code file you wish to use this library within, type ##include "Timers.h"#
+6. In the code file you wish to use this library within, type *#include "Timers.h"*
 
 The library should now be included within your VS C++ project, allowing you to initialise and use objects of the QuickTimer and LabeledTImer classes.
 
@@ -79,44 +79,33 @@ The library should now be included within your VS C++ project, allowing you to i
 
 
 ## Timer Class
-
 The "Timer" class is a pure-virtual class (interface) which is used as an interface for the classes "QuickTimer" and "LabeledTimer".
 
 ### Dependencies
-
 The class uses the chrono library for timings and the iostream library for the sub-classes' Print() methods.
 
 ### Contents
 
-
 #### TimeStamp 
-
 TimeStamp is a datatype defined in this class using the typedef command. The datatype is "std::chrono::time_point<std::chrono::high_resolution_clock>" 
 
 #### TimeStamp startTime
-
 Upon an objects construction, this variable will store the program time. 
 
 #### long long dT
-
 This will store the program's life span
 
 #### Timer() 
-
 The constructor of the class takes note of the current time, to be used in destruction to calculate the lifespan of an object of the class. This time is stored as a TimeStamp custom datatype called startTime
 
 #### Stop()
-
 This function will be called by the sub-classes's destructors. It will calculate the lifespan of the Timer object and store it in the vairable dT.
 
 #### virtual void Print() = 0
-
 This is a pure virtual function, overwritten in the sub-classes.
 
 
 ## QuickTimer Class
-
-
 The QuickTimer class creates objects which are simple timers.
 The timer is started when the object is initialised. Upon destruction of the timer, the time since construction is printed to the console.
 
@@ -147,12 +136,11 @@ The timer is started when the object is initialised. Upon destruction of the tim
 ### Contents:
 
 #### void Print()
-
 This will print the results of the timer to the console in microseconds(us).
 
+
+
 ## LabeledTimer Class
-
-
 The LabeledTimer class creates objects which are labeled timers.
 The timer is started when the object is initialised. Upon destruction of the timer, the time since construction is printed to the console, along with its label.
 
@@ -183,15 +171,12 @@ The timer is started when the object is initialised. Upon destruction of the tim
 ### Contents:
 
 #### LabeledTimer(char c) - Constructor:
-
 This constructor takes a character as a parameter. This character will be used as a label for the results of the timer.
 
 #### void Print() - function
-
-This will print the results of the timer to the console in microseconds(us).
+This will print the results of the timer to the console in microseconds(us), with label character.
 
 #### char label:
-
 This will be the label for the timer
 
 
