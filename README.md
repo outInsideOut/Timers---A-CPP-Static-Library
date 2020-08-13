@@ -182,7 +182,6 @@ This will print the results of the timer to the console in microseconds(us), wit
 This will be the label for the timer
 
 ## SilentTimer Class
-## ================
 
 The SilentTimer class creates objects which are Silent timers.
 
