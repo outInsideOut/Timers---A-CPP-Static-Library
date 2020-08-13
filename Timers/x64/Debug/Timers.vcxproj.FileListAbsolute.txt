@@ -1,0 +1,2 @@
+D:\Dev\GitHub\Timers---A-CPP-Static-Library\x64\Debug\Timers.pdb
+D:\Dev\GitHub\Timers---A-CPP-Static-Library\Timers\x64\Debug\Timers.pdb

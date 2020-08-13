@@ -10,6 +10,8 @@ The Timers Library includes two usable classes: ***QuickTimer*** and ***LabeledT
 
 ***QuickTimer*** is the simplest object, starting a timer on construction of an object of the class and printing the lifespan of that class in im mcroseconds when desctructed.
 
+***SilentTimer*** will not print its result to the console. The *int SilentTimer::Stop()* function returns the timer's result as an *int* datatype. The class has an empty constructor
+
 ***LabeledTimer*** is more complicated, if a is character passed into the constructor of an object, the result printed to the console upon that object's destruction will be labeled with that character.
 
 ## Timers -- Intergration with Visual Studio (VS) C++ projects
@@ -178,6 +180,34 @@ This will print the results of the timer to the console in microseconds(us), wit
 
 #### char label:
 This will be the label for the timer
+
+## SilentTimer Class
+## ================
+
+The SilentTimer class creates objects which are Silent timers.
+
+The timer is started when the object *TimerObj* is initialised. when TimerObj.Stop() is called, it will return the timer's lifespan as an *int* datatype. This can be used for repeatedly timing code blocks to calculate averages or use the lifespan in further calculations.
+
+### usage examples:
+
+#### example 1)
+*this example uses an object pointer to construct and destruct the abstract LabeledTimer object. This code block constructs and destructs 10 pointer to Timer objects totalling their lifespans and printing the mean average to the console.*
+	
+	int tTotal = 0;
+
+	for (short i = 0; i < 10; i++) {
+		SilentTimer* sT = new SilentTimer();
+
+		// code to be timed...
+		//...
+		//...
+
+		delete sT;
+	}
+	
+	std::cout << tTotal / 10 << "\n";	
+
+
 
 
 ## Conclusion

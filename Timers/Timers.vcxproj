@@ -141,12 +141,14 @@
   <ItemGroup>
     <ClInclude Include="LabeledTimer.h" />
     <ClInclude Include="QuickTimer.h" />
+    <ClInclude Include="SilentTimer.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Timers.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LabeledTimer.cpp" />
     <ClCompile Include="QuickTimer.cpp" />
+    <ClCompile Include="SilentTimer.cpp" />
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
