@@ -1,7 +1,19 @@
 # Timers - a C++ static library
 
+## Contents
 
-## Description:
+* [Description](#Description)
+* [Integration With Visual Studio Projects](#integration-with-visual-studio-projects)
+* [Usage Examples](#Usage-Examples)
+* [Class Structure](#Class-structure)
+	* [Timer Class](#timer-class)
+	* [QuickTimer Class](#quicktimer-class)
+	* [LabeledTimer Class](#labeledtimer-class)
+	* [SilentTimer Class](#SilentTimer-class)
+* [Version Control](#Version-Control)
+* [Conclusion](#conclusion)
+
+## Description
 
 
 This c++ static library is developed for use within visual studio C++ projects. When constructed directly before, and destructed directly after a code block, the duration of time that code block ran for will be printed to the console.
@@ -14,7 +26,7 @@ The Timers Library includes two usable classes: ***QuickTimer*** and ***LabeledT
 
 ***LabeledTimer*** is more complicated, if a is character passed into the constructor of an object, the result printed to the console upon that object's destruction will be labeled with that character.
 
-## Timers -- Intergration with Visual Studio (VS) C++ projects
+## Integration with Visual Studio (VS) C++ projects
 
 
 1. Download the package and take note of it's location
@@ -79,11 +91,11 @@ The library should now be included within your VS C++ project, allowing you to i
 		//...
 	}
 
-
-## Timer Class
+## Class Structure
+### Timer Class
 The "Timer" class is a pure-virtual class (interface) which is used as an interface for the classes "QuickTimer" and "LabeledTimer".
 
-### Dependencies
+#### Dependencies
 The class uses the chrono library for timings and the iostream library for the sub-classes' Print() methods.
 
 ### Contents
@@ -107,13 +119,13 @@ This function will be called by the sub-classes's destructors. It will calculate
 This is a pure virtual function, overwritten in the sub-classes.
 
 
-## QuickTimer Class
+### QuickTimer Class
 The QuickTimer class creates objects which are simple timers.
 The timer is started when the object is initialised. Upon destruction of the timer, the time since construction is printed to the console.
 
-### usage examples:
+#### usage examples:
 
-#### example 1)
+##### example 1)
 *this example uses an object pointer to construct and destruct the abstract QuickTimer object. This will print the duration in microseconds(us), of the "code to be timed"*
 
 	Quicktimer* qT = new QuickTimer();
@@ -124,7 +136,7 @@ The timer is started when the object is initialised. Upon destruction of the tim
 
 	delete qT;
 
-#### example 2) 
+##### example 2) 
 *this example uses scope construct and destruct the QuickTimer object. This will print the duration in microseconds(us), of the "code to be timed"*
 
 	if (1 == 1) {
@@ -135,20 +147,20 @@ The timer is started when the object is initialised. Upon destruction of the tim
 		//...
 	}
 
-### Contents:
+#### Contents:
 
-#### void Print()
+##### void Print()
 This will print the results of the timer to the console in microseconds(us).
 
 
 
-## LabeledTimer Class
+### LabeledTimer Class
 The LabeledTimer class creates objects which are labeled timers.
 The timer is started when the object is initialised. Upon destruction of the timer, the time since construction is printed to the console, along with its label.
 
-### usage examples:
+#### usage examples:
 
-#### example 1)
+##### example 1)
 *this example uses an object pointer to construct and destruct the abstract LabeledTimer object. This will print the duration in microseconds(us), of the "code to be timed", , with the label *a* *
 
 	LabeledTimer* lT = new LabeledTimer('a');
@@ -159,7 +171,7 @@ The timer is started when the object is initialised. Upon destruction of the tim
 
 	delete qT;
 
-#### example 2) 
+##### example 2) 
 *this example uses scope construct and destruct the LabeledTimer object. This will print the duration in microseconds(us), of the "code to be timed", with the label *a* *
 
 	if (1 == 1) {
@@ -170,26 +182,26 @@ The timer is started when the object is initialised. Upon destruction of the tim
 		//...
 	}
 
-### Contents:
+#### Contents:
 
-#### LabeledTimer(char c) - Constructor:
+##### LabeledTimer(char c) - Constructor:
 This constructor takes a character as a parameter. This character will be used as a label for the results of the timer.
 
-#### void Print() - function
+##### void Print() - function
 This will print the results of the timer to the console in microseconds(us), with label character.
 
-#### char label:
+##### char label:
 This will be the label for the timer
 
-## SilentTimer Class
+### SilentTimer Class
 
 The SilentTimer class creates objects which are Silent timers.
 
 The timer is started when the object *TimerObj* is initialised. when TimerObj.Stop() is called, it will return the timer's lifespan as an *int* datatype. This can be used for repeatedly timing code blocks to calculate averages or use the lifespan in further calculations.
 
-### usage examples:
+#### usage examples:
 
-#### example 1)
+##### example 1)
 *this example uses an object pointer to construct and destruct the abstract LabeledTimer object. This code block constructs and destructs 10 pointer to Timer objects totalling their lifespans and printing the mean average to the console.*
 	
 	int tTotal = 0;
@@ -207,10 +219,16 @@ The timer is started when the object *TimerObj* is initialised. when TimerObj.St
 	std::cout << tTotal / 10 << "\n";	
 
 
+## Version Control
 
+### v1.0.0
+Inital commit. Timer, QuickTimer and LabeledTimer Classes fully functional.
+
+### v1.1.0
+Addition of SilentTimer class for returning timer values allowing repeat timing and therefore averages.
 
 ## Conclusion
 
-If you have any questions or suggestions about/for this library please do not hesitate to get in touch via email at finred@hotmail.co.uk
+If you have any questions or suggestions about/for this library please do not hesitate to get in touch via email at fionnoconnor.dev@gmail.com
 
 Thank you.
